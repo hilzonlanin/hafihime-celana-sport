@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Script
-          src={`https://track.hafihime.com/api/track.js?siteId=${process.env.NEXT_PUBLIC_HAFIHIME_SITE_ID || ''}`}
+          src={`https://track.hafihime.com/api/track.js?siteId=${process.env.NEXT_PUBLIC_HAFIHIME_SITE_ID || '60d5f484f1a2c8b0f8e4e7a1'}`}
           strategy="afterInteractive"
         />
         <CartProvider>

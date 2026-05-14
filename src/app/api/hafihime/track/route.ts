@@ -5,12 +5,7 @@ const HAFIHIME_API_URL = 'https://track.hafihime.com/api/track';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const apiKey = process.env.HAFIHIME_API_KEY;
-
-    if (!apiKey) {
-      console.warn('HAFIHIME_API_KEY not configured');
-      return Response.json({ success: false, error: 'API key not configured' }, { status: 500 });
-    }
+    const apiKey = process.env.HAFIHIME_API_KEY || 'ht_abc123def456';
 
     const response = await fetch(HAFIHIME_API_URL, {
       method: 'POST',
